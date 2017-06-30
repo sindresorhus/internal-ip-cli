@@ -1,0 +1,47 @@
+{
+	"name": "internal-ip-cli",
+	"version": "0.0.0",
+	"description": "Get your internal IP address",
+	"license": "MIT",
+	"repository": "sindresorhus/internal-ip-cli",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"bin": {
+		"internal-ip": "cli.js"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"cli.js"
+	],
+	"keywords": [
+		"cli-app",
+		"cli",
+		"ip",
+		"ipv6",
+		"ipv4",
+		"address",
+		"internal",
+		"local",
+		"machine",
+		"system",
+		"net",
+		"gateway"
+	],
+	"dependencies": {
+		"internal-ip": "^2.0.0",
+		"meow": "^3.7.0"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"execa": "^0.7.0",
+		"xo": "*"
+	}
+}
