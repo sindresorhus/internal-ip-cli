@@ -1,4 +1,4 @@
-# internal-ip-cli [![Build Status](https://travis-ci.org/sindresorhus/internal-ip-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/internal-ip-cli)
+# internal-ip-cli
 
 > Get your internal IP address
 
