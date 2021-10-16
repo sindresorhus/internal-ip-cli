@@ -1,4 +1,4 @@
-import {isIPv4, isIPv6} from 'net';
+import {isIPv4, isIPv6} from 'node:net';
 import test from 'ava';
 import execa from 'execa';
 

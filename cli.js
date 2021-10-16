@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const internalIp = require('internal-ip');
+import meow from 'meow';
+import {internalIpV6Sync, internalIpV4Sync} from 'internal-ip';
 
 const cli = meow(`
 	Usage
@@ -17,15 +16,20 @@ const cli = meow(`
 	  $ internal-ip --ipv4
 	  10.0.0.79
 `, {
-	boolean: [
-		'ipv6',
-		'ipv4'
-	],
-	alias: {
-		6: 'ipv6',
-		4: 'ipv4'
-	}
+	importMeta: import.meta,
+	flags: {
+		ipv6: {
+			type: 'boolean',
+			default: true,
+			alias: '6',
+		},
+		ipv4: {
+			type: 'boolean',
+			alias: '4',
+		},
+	},
 });
 
-const fn = cli.flags.ipv4 ? 'v4' : 'v6';
-internalIp[fn]().then(console.log);
+const getIp = cli.flags.ipv4 ? internalIpV4Sync : internalIpV6Sync;
+
+console.log(getIp());
